@@ -27,7 +27,7 @@ class Departement(models.Model):
 
 class Commune(models.Model):
     num = models.CharField(primary_key=True,
-                           max_length=3,
+                           max_length=5,
                            verbose_name="numéro de commune")
     nom = models.CharField(max_length=255,
                            verbose_name="nom")

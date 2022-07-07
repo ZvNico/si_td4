@@ -28,19 +28,19 @@ class DivisionAdmin(admin.ModelAdmin):
 
 @admin.register(Accompli)
 class AccompliAdmin(admin.ModelAdmin):
-    list_display = ("id", "salarie", "tache")
+    list_display = ("id", "salarie", "tache", "date_participation_debut", "date_participation_fin")
 
 
 @admin.register(Projet)
 class ProjetAdmin(admin.ModelAdmin):
-    list_display = ("id", "date_fin", "date_debut", "chef")
+    list_display = ("id", "theme", "chef", "date_fin", "date_debut")
 
 
 @admin.register(Tache)
 class TacheAdmin(admin.ModelAdmin):
-    list_display = ("id", "nom")
+    list_display = ("id", "nom", "projet", "description", "date_plus_tot", "date_plus_tard", "duree_tache")
 
 
 @admin.register(Salarie)
 class SalarieAdmin(admin.ModelAdmin):
-    list_display = ("id", "nom", "prenom", "salaire")
+    list_display = ("id", "nom", "prenom", "division", "salaire", "competence", "isChef",  "commune")
